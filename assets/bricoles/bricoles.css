@@ -104,7 +104,19 @@ section.text-section {
 }
 
 
+/* ------------------------------------ Last page */
 
+
+@page last :left {
+    margin: 2cm 4cm 2cm 4cm;
+    @bottom-left {
+        content: none;
+    }
+}
+section.last-section{
+    page:  last;
+    break-before: left
+}
 
 
 
@@ -131,6 +143,9 @@ a {
     position: relative;
 }
 
+p, ul, ol, blockquote {
+    margin-top: 0;
+}
 
 h1 {
     font-family:"HK Grotesk", sans-serif;
@@ -218,11 +233,10 @@ nav ul a {
 
 
 
-/*----------------------------------------------------------- ARTICLE 
+/*----------------------------------------------------------- HEADER 
 ------------------------------------------------------------- */
-.text-section {
-    
-    
+header p {
+    line-height: 1.58;    
 }
 
 
@@ -253,6 +267,7 @@ blockquote {
     font-size: 24pt;
     line-height: 29pt;
     /* hyphens: manual; */
+    margin-bottom: 1em;
     }
     blockquote.deindent p:first-of-type{
         text-indent: -1.35ch;
@@ -270,17 +285,22 @@ cite{
     }
 
 
+
+/*----------------------------------------------------------- ICONO 
+------------------------------------------------------------- */
+
 .fn-ref {
     color: inherit;
-    font-size: 6pt;
+    font-size: 5pt;
     font-weight: bold;
     letter-spacing: 0.05em;
     position: relative;
     text-decoration: none;
-    top: -0.35em;
+    top: -0.75em;
     }
-.fn-ref:before{ content: "‹"; }
-.fn-ref:after{ content: "›"; }
+/* .fn-ref:before{ content: "\202F‹"; }
+.fn-ref:after{ content: "›"; } */
+.fn-ref:before{ content: "\202F"; }
 
 .fn-content {
     color: rgba(0,0,0,.45);
@@ -306,15 +326,28 @@ cite{
 .fn {
     font-family:"HK Grotesk", sans-serif;
     color: #666;
-    line-height: 1;
+    line-height: 1.25;
     font-size: 7.5pt;
+    display: block;
+    margin-bottom: .5em;
+    -webkit-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+    column-break-inside:avoid;
+    display: table;
 }
-
+/* 
 .fn:before {
     content: " [ ";
 }
 .fn:after {
     content: " ] ";
+} */
+
+.notes_container {
+    column-count: 3;
+    column-gap: 5mm;
 }
 /*----------------------------------------------------------- ICONO 
 ------------------------------------------------------------- */
@@ -330,7 +363,10 @@ cite{
 
 .item img + img { margin-top: 5mm; }
 
-figure { padding: 0; margin:0 var(--gutterwidth) var(--gutterwidth) 0; float: left;}
+figure { 
+    padding: 0; margin:0 var(--gutterwidth) var(--gutterwidth) 0; float: left;
+    break-inside: avoid;
+}
 .item { font-size: 7.5pt; }
 .item img {
     width: 100%;
@@ -338,12 +374,18 @@ figure { padding: 0; margin:0 var(--gutterwidth) var(--gutterwidth) 0; float: le
     display: block;
     filter: grayscale(1); 
     mix-blend-mode: multiply; 
+    margin-bottom: 2.5mm; 
     }
 
 .item {  width: var(--colwidth) ; }
 .item-w2 { width:  var(--twocolwidth); }
 
 
+.icono cite {
+    font-size: 7.5pt;
+    font-family: "Freight","TimesNewRoman",serif;
+    font-weight: normal;
+}
 /*----------------------------------------------------------- FOOTER 
 ------------------------------------------------------------- */
 #bibliographie ul,
@@ -351,13 +393,12 @@ figure { padding: 0; margin:0 var(--gutterwidth) var(--gutterwidth) 0; float: le
     list-style-type: none;
     font-size: 7.5pt;
     margin-left: 0;
-    padding-left: 0
+    padding-left: 0;
+    hyphens: manual;
 }
 #bibliographie ul {
-    -moz-column-count: 3;
-    -moz-column-gap: 5mm;
-    -webkit-column-count: 3;
-    -webkit-column-gap : 5mm;
+    column-count: 3;
+    column-gap: 4.3mm;
     }
 
 #bibliographie li {
