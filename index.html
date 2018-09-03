@@ -2,18 +2,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Paged JS test</title>
-
     <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
-
+    <style type="text/css">
+        ul,ol, p {
+            max-width:40em;
+        }
+        li {
+            margin-bottom: .5em;
+        }
+    </style>
 </head>
 <body>
     <h2>Examples</h2>
-	<ul>
-		<li><a href="examples/bricoles.polyfilled.html">Bricoles</a></li>
-	</ul>
+    <ul>
+        <li><a href="examples/bricoles.polyfilled.html">Bricoles</a></li>
+    </ul>
     <h2>Issues</h2>
     <ul>
         <li><a href="issues/nbsp.html">#63 – nbsp (can’t reproduce since last pull); seems ok</a></li>
+    </ul>
+    <h2>Questions</h2>
+    <ol>
+        <li>
+            I nearly understood the difference between paged.js and paged.polyfilled.js…<br>
+            Ho may I instanciate paged on demand? potentially after some js actions…<br>
+            What’s the role of the &lt;template&gt; tag?<br>
+        </li>
+        <li>
+            I’m wondering if it could be possible to “cascade” :left, :right, :recto and :verso selectors? I’ like to be able to select <code>@page :left .myclass { float: left; }</code>
+        </li>
+        <li>Another selector related question. What would be the best way to select and style some elements in a particular page. Something like
+            <code>@page :nth-child(67) {}</code> or <code>@page [data-page-number=67] {}</code>
+        </li>
+        <li>
+            What about a builtin imposition hook / script (need to fill the book with blank pages) that could produce ready to print spreads.
+        </li>
+        <li>
+            How to deal with footnotes ?
+        </li>
+    </ol>
+    <h2>Examples related questions and problems</h2>
+    <h3>Bricoles</h3>
+    <ul>
+        <li>The <code>.bigbold</code> quote on pages 6-7 is rendered differently on page refresh: the break occurs at different places in the text, and (hum… sometimes) the content is partly reproduced on a third page </li>
+        <li>The floating images sections (<code>.icono</code>) is sometimes truncated</li>
+        <li>If I uncomment the lines 359 – 412, I (hum… sometimes) got an infinite loop</li>
     </ul>
 </body>
 </html>
