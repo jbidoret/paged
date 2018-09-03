@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC>
+<html lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>
+      nbsp issue 
+    </title>
+
+    
+    <script src="../dist/paged.polyfill.js"></script>
+
+    <style>
+      /* interface */
+
+      @media screen {
+
+        body {
+          background: whitesmoke;
+          font-family: Arial, sans-serif;
+        }
+
+        .pagedjs_page {
+          background: white;
+          margin-bottom: 10px;
+          box-shadow: 0 0 0 1px rgba(0, 0,0,0.2);
+        }
+
+        .pagedjs_pages {
+          width: calc(var(--width) * 2);
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          margin: 0 auto;
+        }
+
+        .pagedjs_first_page {
+          margin-left: 50%;
+        }
+      }
+    </style>
+
+    <style>
+      :root{
+        font-size: 18px;
+          font-family: Arial, sans-serif;
+      }
+
+      @page {
+        size: 150mm 210mm;
+        margin: 20mm 20mm;
+
+        @bottom-left{
+          content: counter(page);
+        }
+        @top-left: {
+          content: element(chapter-title);
+        }
+      }
+
+      section {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      p {
+        line-height: 22px;
+      }
+
+      h1{
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+    </style>
+
+
+
+
+
+  </head>
+  <body>
+
+
+  <section class="chapter">
+    <h1>Chapter 1: Lorem ipsum dolor sit amet</h1>
+    <p>
+      Nulla dignissim pellentesque magna ac maximus. Integer id tincidunt erat. Sed elementum posuere augue, quis pharetra mi vehicula in. Nullam rhoncus mi quis lectus gravida dignissim. Pellentesque a tortor ut leo pretium auctor non in efficitur massa. Nunc efficitur vestibulum mi, id mattis efficitur quam aliquet mattis quam aliquet id. 
+    </p>
+    <p>
+      Maecenas arcu massa, egestas vel est nec, mollis venenatis tortor. Ut eu finibus libero. Phasellus pharetra ante a purus ornare, eget facilisis sem ultricies. Etiam tincidunt feugiat erat, eget hendrerit turpis ullamcorper quis. Fusce finibus porttitor nisi sed blandit. Nunc libero erat, vehicula ut tincidunt quis, maximus vitae eros. Donec tristique urna bibendum, mattis nisl vel, dignissim nisl. Duis tincidunt eros nec volutpat scelerisque. Phasellus id malesuada nulla. Duis aliquam mi non malesuada suscipit. Curabitur pretium nisl eu tortor tempus, et sollicitudin quam iaculis. Ut venenatis eros ligula, in ornare eros facilisis vel.
+    </p>
+    <p>
+      Donec auctor libero a lorem egestas consequat aliquam sed lorem. Cras ac lacinia ipsum. Donec non elementum purus, et porta eros. Cras ullamcorper mi eu semper aliquam. Duis <br>«&nbsp;magnaipsum&nbsp;» <span style="color:red">(starting with nbsp) </span> auctor at leo non, pharetra luctus felis. Ut tempus finibus dui, sit amet scelerisque nisi feugiat non. Proin posuere quam vitae finibus pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id felis at nulla mollis bibendum. Proin posuere quam vitae finibus pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id felis at nulla mollis bibendum. Proin posuere quam vitae finibus pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id felis at nulla mollis bibendum.
+    </p>
+    <p>
+      Donec odio lacus, maximus a ultrices non, pulvinar eget nunc. Morbi cursus eget enim eleifend tincidunt. In vel odio gravida, hendrerit diam ut, fringilla urna. Aenean sit amet nisi ut nisl placerat bibendum. Aenean consequat dapibus orci non accumsan. In imperdiet leo lectus, vitae euismod quam egestas et. Donec augue mauris, malesuada ac nunc dapibus, faucibus malesuada velit. Vivamus quis enim eget orci sollicitudin ultrices. Duis ut nulla velit. Donec feugiat quam nec sem cursus, vel feugiat nunc fringilla.
+    </p>
+    <p>
+      Praesent placerat lectus ac mauris rhoncus, eget iaculis nisl molestie. Etiam posuere luctus sed.  Aliquam eu vel erat. Fusce iaculis vulputate leo, sit amet vaoreet ero aliquam aim Sed id telus ammivumai&#8239;! <span style="color:green">(looks like proper behavior with ending nbsp;, thinsp; or even #8239;) </span>porttitor pharetra. Morbi non fringilla augue. Cras sodales egestas mi, et porta orci ultricies sed. Sed et nulla a ligula aliquet accumsan non eleifend quam. Aliquam pellentesque, justo vel interdum accumsan, purus ipsum porttitor lectus, ac luctus risus lectus nec lectus. Cras ut augue condimentum, egestas nisi in, dictum erat. Nullam tincidunt tincidunt tempor. Sed in eleifend nibh, sit amet feugiat nisi. Cras at ante ut urna sagittis dictum ut nec elit.
+    </p>
+    <p>
+      In feugiat euismod massa sagittis dictum. Nullam eu nisl eu elit laoreet tincidunt id sed ligula. Praesent vulputate faucibus nibh, ut ultrices nunc aliquam nec. Mauris et condimentum ligula. Vestibulum nec tortor quis urna dictum luctus. Cras quis suscipit metus. Ut dignissim ullamcorper aliquam. Donec condimentum eu tellus at interdum. Cras quis suscipit metus. Ut dignissim ullamcorper aliquam. Donec condimentum eu tellus at interdum. Cras quis suscipit metus. Ut dignissim ullamcorper aliquam. Donec condimentum eu tellus at interdum.  Ut dignissim ullamcorper aliquam.
+    </p>
+    <p>
+      Proin eu quam id arcu interdum laoreet nec at urna. Vivamus non sem quis dolor sagittis non sem quis dolor sagittis  facilisis. Nunc quis urna non neque sollicitudin hendrerit. Vestibulum sedarem <br>« odiovelit » <span style="color:red">(starting with  unicode non breaking space char) </span>vestibulum vitae elementum convallis, tristique eu est. Sed vitae tortor sed purus accumsan euismod nec finibus lorem. Donec consectetur libero sit amet pretium eleifend. Nulla placerat ipsum sed eros aliquet, at venenatis purus convallis. Pellentesque pulvinar, justo eget tincidunt semper, augue massa placerat enim, non tempus quam erat eu orci. Suspendisse auctor consectetur lectus, a mattis odio. Pellentesque id sem sit amet justo fringilla bibendum id sit amet quam. Vivamus ex est, ultrices non pharetra eu, facilisis nec quam.
+    </p>
+    <p>
+      Etiam molestie sed orci sed suscipit. Donec ipsum est, venenatis ut nisl ut, viverra auctor diam. Cras vestibulum lacus vel nunc dapibus aliquam. Aliquam accumsan lorem rhoncus tortor rhoncus, ut euismod sapien ullamcorper. Vivamus et dictum lacus, eu pellentesque dolor. Suspendisse potenti. Mauris vitae volutpat odio. Duis vitae purus nec enim posuere efficitur at vitae nisl. Etiam enim nisl, rutrum in vestibulum nec, dapibus ut dui. Pellentesque imperdiet molestie ante quis feugiat. Sed nec felis congue, cursus ligula eget, bibendum est. Proin mattis, tortor non lobortis lobortis, nibh quam aliquam neque, sed tristique nibh ex aliquet felis. 
+    </p>
+  </section>
+  
+
+</body>
