@@ -16,6 +16,7 @@
     <h2>Examples</h2>
     <ul>
         <li><a href="examples/bricoles.polyfilled.html">Bricoles</a></li>
+        <li><a href="examples/reclus.html">L’évolution, la révolution et l’idéal anarchique</a></li>
     </ul>
     <h2>Issues</h2>
     <ul>
@@ -38,15 +39,21 @@
             What about a builtin imposition hook / script (need to fill the book with blank pages) that could produce ready to print spreads.
         </li>
         <li>
-            How to deal with footnotes ?
+            How to deal with footnotes ?<br>
+            Tried a solution in <a href="examples/bricoles.polyfilled.html">bricoles</a>, by pushing notes at the end of section, but would be pleased to be able to layout side notes.
+        </li>
+        <li>
+            How to span an image over a spread (without hack)?
+        </li>
+        <li>
+            As the lib evolves quickly, what about a version number in dist/paged.polyfill.js first line?
         </li>
     </ol>
     <h2>Examples related questions and problems</h2>
     <h3>Bricoles</h3>
     <ul>
         <li>The <code>.bigbold</code> quote on pages 6-7 is rendered differently on page refresh: the break occurs at different places in the text, and (hum… sometimes) the content is partly reproduced on a third page </li>
-        <li>The floating images sections (<code>.icono</code>) is sometimes truncated</li>
-        <li>If I uncomment the lines 359 – 412, I (hum… sometimes) got an infinite loop</li>
+        <li>The floating images sections (<code>.icono</code>) is sometimes truncated; might be related to issue #64</li>
     </ul>
 </body>
 </html>
