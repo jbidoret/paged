@@ -37,3 +37,11 @@
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'Franc';
+    src: url('FrancGothiqueBrush.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
