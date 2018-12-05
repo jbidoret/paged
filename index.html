@@ -10,6 +10,8 @@
         li {
             margin-bottom: .5em;
         }
+        body { font-family:sans-serif; max-width:35em; color:forestgreen; margin:3em}
+        a { color:forestgreen }
     </style>
 </head>
 <body>
@@ -18,43 +20,29 @@
         <li><a href="examples/bricoles.polyfilled.html">Bricoles</a></li>
         <li><a href="examples/reclus.html">L’évolution, la révolution et l’idéal anarchique</a></li>
         <li><a href="examples/bing.html">Bing</a></li>
+        <li><a href="examples/littlebing.html">Little Bing (variable font stress test)</a></li>
     </ul>
     <h2>Issues</h2>
     <ul>
-        <li><a href="issues/nbsp.html">#63 – nbsp (can’t reproduce since last pull); seems ok</a></li>
+        <li>
+            <a href="issues/nbsp.html">#63 – nbsp (can’t reproduce since last pull); seems ok</a>
+        </li>
     </ul>
     <h2>Questions</h2>
     <ol>
         <li>
-            I nearly understood the difference between paged.js and paged.polyfilled.js…<br>
-            Ho may I instanciate paged on demand? potentially after some js actions…<br>
-            What’s the role of the &lt;template&gt; tag?<br>
+            Variable fonts<br>
         </li>
-        <li>
-            I’m wondering if it could be possible to “cascade” :left, :right, :recto and :verso selectors? I’ like to be able to select <code>@page :left .myclass { float: left; }</code>
-        </li>
-        <li>Another selector related question. What would be the best way to select and style some elements in a particular page. Something like
+        <li>What would be the best way to select and style some elements in a particular page. Something like
             <code>@page :nth-child(67) {}</code> or <code>@page [data-page-number=67] {}</code>
         </li>
         <li>
-            What about a builtin imposition hook / script (need to fill the book with blank pages) that could produce ready to print spreads.
-        </li>
-        <li>
-            How to deal with footnotes ?<br>
-            Tried a solution in <a href="examples/bricoles.polyfilled.html">bricoles</a>, by pushing notes at the end of section, but would be pleased to be able to layout side notes.
-        </li>
-        <li>
-            How to span an image over a spread (without hack)?
+            What about an imposition hook / script (need to fill the book with blank pages) that could produce ready to print spreads.
         </li>
         <li>
             As the lib evolves quickly, what about a version number in dist/paged.polyfill.js first line?
         </li>
     </ol>
-    <h2>Examples related questions and problems</h2>
-    <h3>Bricoles</h3>
-    <ul>
-        <li>The <code>.bigbold</code> quote on pages 6-7 is rendered differently on page refresh: the break occurs at different places in the text, and (hum… sometimes) the content is partly reproduced on a third page </li>
-        <li>The floating images sections (<code>.icono</code>) is sometimes truncated; might be related to issue #64</li>
-    </ul>
+    
 </body>
 </html>

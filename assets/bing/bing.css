@@ -8,8 +8,8 @@
 /* ------------------------------------ Common pages */
 
 @page{ 
-    size: var(--height) var(--width); 
-    
+    /* size: var(--height) var(--width);  */
+    size: 195mm 120mm; 
 }
 @page :left {
     margin: 2cm 2cm 2cm 1cm;
