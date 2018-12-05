@@ -2,22 +2,15 @@
 * { box-sizing: border-box; }
 
 body{
-
     font-family: 'Franklin';
     font-size: 9pt;
     line-height: 1.5;
     color: rgba(0,0,0,.85);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "lnum" 1, "pnum" 1, "kern" 1, "liga" 1;
     }
 
 
-.spread {
-    margin: 50px;
-    display: flex;
-}
+
 
 :root{
     --w: 240px;

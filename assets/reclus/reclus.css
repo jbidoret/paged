@@ -381,6 +381,16 @@ grid-column: 2 / span 4;
     grid-row: 4 / span 4;
 } 
 
+
+.grid-content #img-23 { 
+    grid-column: 2 / span 6;
+    grid-row: 5 / span 4;
+} 
+.grid-content #img-24 { 
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+} 
+
 .section-id {
     position: absolute;
     font-size: 72pt;

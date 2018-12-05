@@ -2,25 +2,20 @@
 
 /* ------------------------------------ Common pages */
 
-@page{ 
+@page { 
     size: 170mm 240mm; 
     @bottom-left {
         content: counter(page);
         font-size: 7.5pt;
         font-family:"HK Grotesk", sans-serif;
+        text-align: left;
     }
 }
 @page :left {
     margin: 2cm 2cm 2cm 5cm;
-    @bottom-left {
-        text-align: left;
-    }
 }
 @page :right {
     margin: 2cm 5cm 2cm 2cm;
-    @bottom-left {
-        text-align: left;
-    }
 }
 @page :first {
     @bottom-left {
