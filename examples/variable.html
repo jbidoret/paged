@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8" >
+        <title>Bricoles</title>
+        
+
+        <link rel="stylesheet" type="text/css" href="../assets/styles/preview.css">
+        <link rel="stylesheet" type="text/css" href="../assets/bing/variable.css">
+        <style type="text/css">
+            body {
+                text-align: center;
+            }
+            .t{
+                font-size: 6em;
+                line-height: 1;
+                text-transform: uppercase;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: .5em;
+            }
+            .t span {display: block; width: 50%; text-align: center;}
+        </style>
+    </head>
+    <body class="bing">
+        
+        <article class="t">
+             It seems that Paged.js is variable-proof
+        </article>
+
+        <footer>
+            <p>
+                TroisMille est une fonte de <a href="http://marcrouault.tumblr.com/">Marc Rouault</a>.
+            </p>
+        </footer>
+
+        <script src="../assets/bing/jquery-3.3.1.min.js"></script> 
+        <script src="../assets/bing/blast.js"></script> 
+        <script>
+
+                    
+            function pagedjs() {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://unpkg.com/pagedjs/dist/paged.polyfill.js";
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+
+
+            const scale = (num, in_min, in_max, out_min, out_max) => {
+                return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+            }
+
+
+            $(function(){
+                $('.t').blast({
+                    delimiter: "all" 
+                });
+                var spans = document.querySelectorAll('span'),
+                    len = spans.length;
+
+                spans.forEach( function(element, index) {
+                    let wght = parseInt(scale(index, 1, len, 1, 1000));
+                    let wdth = parseInt(scale(index, 1, len, 1, 1000));
+                    let size = parseInt(scale(index, 1, len, 80, 140));
+                    var variation = ' "wdth" '+ wdth +', "wght" ' + wght;
+                    element.style.fontVariationSettings = variation;
+                    element.style.fontSize = size + '%';
+                    // element.style.wordSpacing = wspacing + 'em';
+                });
+
+                pagedjs();
+
+            })
+
+        </script> 
+
+    </body>
+</html>

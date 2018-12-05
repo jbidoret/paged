@@ -1,0 +1,42 @@
+/* ------------------------------------ Common pages */
+
+/* ------------------------------------ Common pages */
+
+@page{ 
+    size: 19.5cm 12.0cm; 
+    size: A5;
+}
+@page :left {
+    margin: 2cm 2cm 2cm 2cm;
+}
+@page :right {
+    margin: 2cm 2cm 2cm 2cm;
+}
+
+
+/* ------------------------------------ Text page */
+
+
+
+@font-face {
+    font-family: 'TroisMille';
+    src: url('TroisMilleLent_VAR.ttf') format("truetype");
+    font-weight: 1 999;
+}
+
+body {
+    font-family: 'TroisMille';
+}
+a {
+    color: inherit;
+}
+
+footer p + p {
+    text-indent: 1em;
+}
+footer p {
+    font-variation-settings: "wdth" 300, "wght" 400; 
+    font-size: 10pt;
+}
+
+
